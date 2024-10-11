@@ -25,7 +25,7 @@ import random
 # pirmas = input('Jusu mylimo aktoriaus vardas: ')
 # antras = input('Jusu mylimo aktoriaus pavarde: ')
 #
-# yeap = pirmas[:3]                                  # taip gali paimti pirmas raides is string
+# yeap = pirmas[0:3]                                  # taip gali paimti pirmas raides is string
 # yeah = antras[:3]
 # print(f'{yeap} {yeah}')
 
@@ -45,20 +45,42 @@ import random
 # txt = txt.replace('a', '*' )
 # print(txt)
 
+# txt = txt.replace('A', '*').replace('a', '*' )  # truumpesnis budas
+
 # 6
 
-# txt = 'An American in Paris'
-# a = "Breakfast at Tiffany's"
-# b = "2001: A Space Odyssey"
-# c = "It's a Wonderful Life"
-#
-# print(txt.translate({ord(i): None for i in 'aAeEoOuUIi'}))      #kosmiska komanda translate, isgelbejo
-# print(a.translate({ord(i): None for i in 'aAeEoOuUIi'}))
-# print(b.translate({ord(i): None for i in 'aAeEoOuUIi'}))
-# print(c.translate({ord(i): None for i in 'aAeEoOuUIi'}))
+txt = 'An American in Paris'
+a = "Breakfast at Tiffany's"
+b = "2001: A Space Odyssey"
+c = "It's a Wonderful Life"
+
+print(txt.translate({ord(i): None for i in 'aAeEoOuUIiy'}))      #kosmiska komanda translate, isgelbejo
+print(a.translate({ord(i): None for i in 'aAeEoOuUIiy'}))
+print(b.translate({ord(i): None for i in 'aAeEoOuUIiy'}))
+print(c.translate({ord(i): None for i in 'aAeEoOuUIiy'}))
 
 # 7
 
 starWars = "Star Wars: Episode " + (" " * random.randint(1, 9)) + str(random.randint(1, 7)) + " - A New Hope"
 
 print(starWars)
+
+print(starWars.translate({ord(i): None for i in 'AaĄąBbCcČčDdEeĘęĖėFfGgHhIiĮįYyJjKkLlMmNnOoPpRrSsŠšTtUuŲųŪūVvZzŽžwW- :'}))
+
+# 8
+
+# string = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood"
+#
+# s = len(string.split())
+# print(s)
+
+
+
+# text = "Don't Be a Menace to South Central While Drinking Your Juice in the Hood"
+# text = split()
+# def greater_5(text):
+# 	letters = [1 for word in text if len(word)>5]
+#
+# 	return sum(letters)
+#
+# print(greater_5(text))
